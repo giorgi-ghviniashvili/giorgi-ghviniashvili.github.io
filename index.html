@@ -100,70 +100,8 @@ class Me:
         ]
         return languages
 
-class bcolors:
-        HEADER = '\033[95m'
-        OKBLUE = '\033[94m'
-        OKGREEN = '\033[92m'
-        WARNING = '\033[93m'
-        FAIL = '\033[91m'
-        ENDC = '\033[0m'
-        BOLD = '\033[1m'
-        UNDERLINE = '\033[4m'
-
-def start():
-    me = Me()
-    print(bcolors.OKGREEN + 'Hello, I am {0} {1}'.format(me.firstName, me.lastName) + bcolors.ENDC)
-    print(bcolors.OKGREEN + 'Basic Information About me:' + bcolors.ENDC)
-    print(bcolors.OKGREEN + '* I''m {0} years old'.format(me.age) + bcolors.ENDC)
-    print(bcolors.OKGREEN + '* {0} :)'.format(me.sex) + bcolors.ENDC)
-    print(bcolors.OKGREEN + '* Was born at {0}'.format(me.dateOfBirth) + bcolors.ENDC)
-    print(bcolors.OKGREEN + '* {0}'.format(me.description) + bcolors.ENDC)
-    while(True):
-        userInput = input(bcolors.HEADER + 'type -ed (education), -ex (experience) , -s (skills), -t (trainigs), -f (foreign languages) or -q to quit..' + bcolors.ENDC)
-        if userInput == '-q':
-            print('Bye')
-            break
-        elif userInput == '-ed':
-            education = me.get_education()
-            print('-' * 50)
-            print(bcolors.OKBLUE + "My Education:" + bcolors.ENDC)
-            print('-' * 50)
-            for ed in education:
-                print(bcolors.OKGREEN + '* ' + ed[0] + ' : ' + ed[1] + bcolors.ENDC)
-        elif userInput == '-ex':
-            experience = me.get_working_experience()
-            print('-' * 50)
-            print(bcolors.HEADER + "I worked here :)" + bcolors.ENDC)
-            print('-' * 50)
-            for ex in experience:
-                print(bcolors.OKBLUE + '* ' + ex[0] + ' : ' + ex[1] + bcolors.ENDC)
-        elif userInput == '-s':
-            skills = me.get_technical_skills()
-            for skill in skills:
-                categoryName = me.skillCategories[skill['category']]
-                print('-' * 50)
-                print(bcolors.HEADER + categoryName + bcolors.ENDC)
-                print('-' * 50)
-                for item in skill['items']:
-                    print(bcolors.OKGREEN + "* {0}".format(item) + bcolors.ENDC)
-        elif userInput == '-t':
-            trainings = me.get_attended_trainings()
-            print('-' * 50)
-            print(bcolors.HEADER + "Trainings that I have attended:" + bcolors.ENDC)
-            for training in trainings:
-                print(bcolors.OKGREEN + '* ' + training[0] + ' | ' + training[1] + bcolors.ENDC)
-        elif userInput == '-f':
-            languages = me.get_foreign_languages()
-            print('-' * 50)
-            print(bcolors.HEADER + "I speak these languages:" + bcolors.ENDC)
-            print('-' * 50)
-            for language in languages:
-                print(bcolors.OKGREEN + '* ' +  language[0] + ' - ' + language[1] + bcolors.ENDC)
-        else:
-            print(bcolors.FAIL + "wrong input, input -ex, -ed, -s, -t, -f or -q" + bcolors.ENDC)
-    
 if __name__ == '__main__':
-    start()</code></pre>
+    me = Me()</code></pre>
 	</body>
 
 </html>
