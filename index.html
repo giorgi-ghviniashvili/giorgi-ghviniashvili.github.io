@@ -1,1 +1,169 @@
-Hello World
+<html>
+	<head>
+		<style>
+			body, html{
+				padding: 0px;
+				margin: 0px;
+			}
+		</style>
+		<link rel="stylesheet"
+      		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-dune-dark.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+	</head>
+	<body>
+		<pre><code class="python">
+#!/usr/bin/python
+class Me:
+    def __init__(self):
+        self.firstName = 'Giorgi'
+        self.lastName = 'Ghviniashvili'
+        self.age = 22
+        self.sex = 'Male'
+        self.dateOfBirth = 'Eighteenth of February (If you need year of my birth use math: 2017 - 22) '
+        self.phoneNumber = '+995568012510'
+        self.mail = 'giorgi.ghviniashvili00@gmail.com'
+        self.address = 'Tianeti St. 85 Tbilisi, Georgia'
+        self.description = 'I like cats, movies, hiking and camping. =)'
+    def get_working_experience(self):
+        experience = [
+                ('November 2016 - Present','weinor.de','Programmer' ),
+                ('August 2016', 'Ministry Of Labour, Health and Social Affairs of Georgia', 'Internship in IT department'),
+                ('March 2015', 'Insurance Company, Aldagi')
+        ]
+        return experience
+    
+    def get_education(self):
+        education = [
+                ('September 2013 - Present', 'Ivane Javakhishvili State University, Faculty of Economics'),
+                ('November 2015 - August 2017', 'College Itvet, Computer Systems and Networking' ),
+                ('September 2001 - July - 2013','#1 Public School of Dedoflistskaro, city')
+        ]
+        return education
+    
+    def get_attended_trainings(self):
+        trainings = [
+                ('February 2016 - March 2016', 'GITA, Training of Python Trainer'),
+                ('August 2014', 'Banking, credit oficer trainig at Business Academy')
+        ]
+        return trainings
+    
+    def get_technical_skills(self):
+        self.skillCategories = {
+                0 : 'officeSkills',
+                1 : 'serverAddministration',
+                2 : 'frontEndScriptingAndMarkup',
+                3 : 'OOPLanguages',
+                4 : 'frameworks',
+                5 : 'designPatterns/Principles',
+                6 : 'databases'
+        }
+        skills = [
+                {
+                    'category': 0,
+                    'items': ['MS Word','MS Excel','MS Project', 'MS PowerPoint']
+                },
+                {
+                    'category': 1,
+                    'items': ['Linux Server(Rad Hat, Debian, Ubuntu, Centos)', 'Apache', 'NgNix', 'bind', 'squid', 'nfs', 'samda', 'Windows server']
+                },
+                {
+                    'category': 2,
+                    'items': ['HTML', 'CSS', 'JQuery', 'Ajax', 'AngularJS']
+                },
+                {
+                    'category': 3,
+                    'items': ['C/C++', 'C#', 'Python', 'Bash Scripting', 'PHP']
+                },
+                {
+                    'category': 6,
+                    'items': ['TSQL', 'MySql']
+                },
+                {
+                    'category': 5,
+                    'items': ['MVC', 'SOLID', 'DRY']
+                },
+                {
+                    'category': 4,
+                    'items': ['.NET', 'ASP.MVC', 'Django', 'Flask', 'Laravel', 'EntityFramework', 'ADO.NET', 'SQLAlchemy']
+                }
+
+        ]
+        return skills
+    
+    def get_foreign_languages(self):
+        languages = [
+                ('Georgian', 'Native'),
+                ('English', 'Fluent'),
+                ('Deutsch', 'Beginner'),
+                ('Russion', 'Intermidiate')
+        ]
+        return languages
+
+class bcolors:
+        HEADER = '\033[95m'
+        OKBLUE = '\033[94m'
+        OKGREEN = '\033[92m'
+        WARNING = '\033[93m'
+        FAIL = '\033[91m'
+        ENDC = '\033[0m'
+        BOLD = '\033[1m'
+        UNDERLINE = '\033[4m'
+
+def start():
+    me = Me()
+    print(bcolors.OKGREEN + 'Hello, I am {0} {1}'.format(me.firstName, me.lastName) + bcolors.ENDC)
+    print(bcolors.OKGREEN + 'Basic Information About me:' + bcolors.ENDC)
+    print(bcolors.OKGREEN + '* I''m {0} years old'.format(me.age) + bcolors.ENDC)
+    print(bcolors.OKGREEN + '* {0} :)'.format(me.sex) + bcolors.ENDC)
+    print(bcolors.OKGREEN + '* Was born at {0}'.format(me.dateOfBirth) + bcolors.ENDC)
+    print(bcolors.OKGREEN + '* {0}'.format(me.description) + bcolors.ENDC)
+    while(True):
+        userInput = input(bcolors.HEADER + 'type -ed (education), -ex (experience) , -s (skills), -t (trainigs), -f (foreign languages) or -q to quit..' + bcolors.ENDC)
+        if userInput == '-q':
+            print('Bye')
+            break
+        elif userInput == '-ed':
+            education = me.get_education()
+            print('-' * 50)
+            print(bcolors.OKBLUE + "My Education:" + bcolors.ENDC)
+            print('-' * 50)
+            for ed in education:
+                print(bcolors.OKGREEN + '* ' + ed[0] + ' : ' + ed[1] + bcolors.ENDC)
+        elif userInput == '-ex':
+            experience = me.get_working_experience()
+            print('-' * 50)
+            print(bcolors.HEADER + "I worked here :)" + bcolors.ENDC)
+            print('-' * 50)
+            for ex in experience:
+                print(bcolors.OKBLUE + '* ' + ex[0] + ' : ' + ex[1] + bcolors.ENDC)
+        elif userInput == '-s':
+            skills = me.get_technical_skills()
+            for skill in skills:
+                categoryName = me.skillCategories[skill['category']]
+                print('-' * 50)
+                print(bcolors.HEADER + categoryName + bcolors.ENDC)
+                print('-' * 50)
+                for item in skill['items']:
+                    print(bcolors.OKGREEN + "* {0}".format(item) + bcolors.ENDC)
+        elif userInput == '-t':
+            trainings = me.get_attended_trainings()
+            print('-' * 50)
+            print(bcolors.HEADER + "Trainings that I have attended:" + bcolors.ENDC)
+            for training in trainings:
+                print(bcolors.OKGREEN + '* ' + training[0] + ' | ' + training[1] + bcolors.ENDC)
+        elif userInput == '-f':
+            languages = me.get_foreign_languages()
+            print('-' * 50)
+            print(bcolors.HEADER + "I speak these languages:" + bcolors.ENDC)
+            print('-' * 50)
+            for language in languages:
+                print(bcolors.OKGREEN + '* ' +  language[0] + ' - ' + language[1] + bcolors.ENDC)
+        else:
+            print(bcolors.FAIL + "wrong input, input -ex, -ed, -s, -t, -f or -q" + bcolors.ENDC)
+    
+if __name__ == '__main__':
+    start()</code></pre>
+	</body>
+
+</html>
