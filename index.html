@@ -8,6 +8,12 @@
 				padding: 0px;
 				margin: 0px;
 			}
+            .pic-ascii{
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                z-index: 99999;
+            }
 		</style>
 		<link rel="stylesheet"
       		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-dune-dark.min.css">
@@ -15,6 +21,57 @@
 		<script>hljs.initHighlightingOnLoad();</script>
 	</head>
 	<body>
+            <font class="pic-ascii" face="monospace, Courier" size="1" color="60ac39">::.,:~:,:~:~~:.=:=::+I?~?I?=?+???+???I?+?????+++==+++~+=::~:<br>
+7~=,==,,::,,:=,,::::~=:???=I??+I?+??+??I7+?=II+++==+==+~:~=:<br>
+~~,,:=+?,,::,,:~,,:~:::++I+I+++???II????II?+=?+++=??:=++~~~=<br>
+:,,..:=77~:,,,,,~:,:+=:+?+?=+???I?III+=+II=7I???+==+=~+==~=+<br>
+?.,.,,,,=:,,+7==+,:,:+??++I??II?III?+II7I7I+I+=?+?+=+:?++=++<br>
+++,,,,,,,II=7=+:==,,:+??+??+I????=?+I?I?+=I?II??=+++=?~====+<br>
+,,.,,:,,,,II=,~=====++=???=++???III??=I???I+??????+==II=+?+=<br>
+..,:.,,~,,,?~~==++==~+?+++??=+?I+=+=+~=II7II?I=+II?=?+++?+==<br>
+.,:,~~,~,:.:=+=~:~:+~~++=?~?++~=~=~~=~~~,:+II?I:==+++++??++=<br>
+:::::=.=?=:::=+~~=~~=~+==+??=+=,,~,,,,,..==+?I??=++=++:=+=++<br>
+~,~,=~.+?=+==~~+=~~==~~==++=~,:::~=++?=~:,,~II~+?????II==+=+<br>
+~~.,?=?++==+=~=~:~==~+++~?::,,:=I7777II??II,I??+??+?I=+=+~~+<br>
+,.:+??++?++=+==~:~=~~==++=,.,,:=I777IIIII?I~I??+??+++?+=+?++<br>
+=+?????++=====~=~~=:++++==.,,,:I7777I7IIIII?+??+??+?++?+?:++<br>
+??+?+??+++~~~=~~:~=+=~==+?:..,I7+=+=~~+?:..+?7I+??+?II+??+++<br>
+,?????+=+==~===++====++=???=,,7I??=~:+I7..~++I?I=+?++=I=++++<br>
+,I?I?+?+??=~~++~~~=++?++:=I?~~77IIIIII77+~+++II????==+=+=?++<br>
+:,?II?I?=+==~~~====+~==?=+77I++?IIIII7II7I??+??++++++~+~?+?+<br>
+~,==~:~+===+=++==~+~++=+=+I===++?I??I+~:==I?+7??+~=+=?+=++?+<br>
+::+=+==:===~====+===?==+=++:?~+?+?+~++~~::+7I??++=???~=???++<br>
+:~.====,=~=~==~====+++?+++I+7===++~??+=~=~++??+I+~?~::+~=++=<br>
+:~,~++~:~=+====++==?=+++=??+II,::~~~??++=:II?I?I+?~+=~==++??<br>
+:~,,+?~::~=~++++++++=~?++??77I+,..,:::,:,II7III??+~?+=?~=+=?<br>
+:::,??~:~+~===I+=+=++?+?+~:?77I?~......I?III+??++~+~+==??+?+<br>
+::,.??:::==:=++++++++=+=:,,...+I+~:,,:I??+?=??+?=~??~=+=~=??<br>
+~::,??,::====+++?==~~~~::~:,.....,~~:?I?+???+????~===+=I??++<br>
+:,::~?.:~~==+==+~~::::::,,,,,,,......+I??+??II?I~~+~+==~?+::<br>
+::::.~::~~+=?:,,,,:,,,,,,,,..........I???I7?II???=+~=~,=~~++<br>
+??::::,~~=~,,:,,,,.......,..,,......,:?III??I?III~~=:,~:~:++<br>
+??:::,::~=,:,,..,,.........,........,,:?????II???I=+?~~::~++<br>
+??=,:,::~~,,,...,...........,,.....,,:,IIII7II?II=:~~:~~=:==<br>
+?I?:~::~::,,..,,...............,,...,,,:?IIIIII?I+=?+=====+=<br>
+?+?:::,~~,,,.,,...................,,,,,,77?I?II?+=~=~==+=+++<br>
++=+=:=,:,,..,,.....................,,,,,,??+???77?=::~:~~~=+<br>
+~:~=~~,:,.,,,......................,,,,,:?II?????+~=~~::~===<br>
+::~:::,.,,,,........................,,,,,~????????=======:,=<br>
+====:,,,,,,,........................,,,,,,?I??++?+~~++===~~~<br>
++++,,,,,,,,...........................,,,,+????I?+~+========<br>
+==:,,,,,,,................................:?+????+++++??????<br>
+~:,,,,,,,.................................=III7777I7IIIIII??<br>
+?+,,,:,,,.................................7IIIIIIIIIIII?????<br>
+??+=,,,...................................IIIIIIIII?????????<br>
+??+=~~:.....=............................,IIIIIIIIIII???++++<br>
+++==:::,,+I~I............................,IIII?IIIII???+????<br>
++=~~,,,,?????,...........................,I????????III??????<br>
+=~::,.~++++?=~............................???IIIIII????????+<br>
+~~:,.~++++++==............................:IIIII????????+?++<br>
+~::,.=~==+++=:,...........................:???????????++++++<br>
+~::,,,==+====~=............................???????+?++++=+++<br>
+</font>
+        </div>
 		<pre><code class="python">
 #!/usr/bin/python
 
@@ -26,16 +83,19 @@ class Me:
     def __init__(self):
         self.firstName = 'Giorgi'
         self.lastName = 'Ghviniashvili'
-        self.age = 22
+        self.age = 23
         self.sex = 'Male'
-        self.dateOfBirth = 'Eighteenth of February (If you need year of my birth use math: 2017 - 22) '
+        self.dateOfBirth = 'Eighteenth of February'
         self.phoneNumber = '+995568012510'
         self.mail = 'giorgi.ghviniashvili00@gmail.com'
         self.description = 'I like cats, movies, hiking and camping. =)'
+        self.github = 'https://github.com/giorgi-ghviniashvili'
+
     def get_working_experience(self):
         experience = [
                 ('November 2016 - Present','weinor.de','Programmer' ),
-                ('August 2016', 'Ministry Of Labour, Health and Social Affairs of Georgia', 'Internship in IT department'),
+                ('August 2016', 'Ministry Of Labour, Health and Social Affairs of Georgia', 
+                                'Internship in IT department'),
                 ('March 2015', 'Insurance Company, Aldagi')
         ]
         return experience
@@ -56,43 +116,43 @@ class Me:
         return trainings
     
     def get_technical_skills(self):
-        self.skillCategories = {
-                0 : 'officeSkills',
-                1 : 'serverAddministration',
-                2 : 'frontEndScriptingAndMarkup',
-                3 : 'OOPLanguages',
-                4 : 'frameworks',
-                5 : 'designPatterns/Principles',
-                6 : 'databases'
-        }
         skills = [
                 {
-                    'category': 0,
+                    'category': 'officeSkills',
                     'items': ['MS Word','MS Excel','MS Project', 'MS PowerPoint']
                 },
                 {
-                    'category': 1,
-                    'items': ['Linux Server(Rad Hat, Debian, Ubuntu, Centos)', 'Apache', 'NgNix', 'bind', 'squid', 'nfs', 'samda', 'Windows server']
+                    'category': 'serverAddministration',
+                    'items': ['Linux Server(Rad Hat, Debian, Ubuntu, Centos, ArchLinux)', 
+                              'Apache', 'NgNix', 
+                              'bind', 'squid', 
+                              'nfs', 'samda', 
+                              'Windows server']
                 },
                 {
-                    'category': 2,
+                    'category': 'frontEndScriptingAndMarkup',
                     'items': ['HTML', 'CSS', 'JQuery', 'Ajax', 'AngularJS']
                 },
                 {
-                    'category': 3,
+                    'category': 'OOPLanguages',
                     'items': ['C/C++', 'C#', 'Python', 'Bash Scripting', 'PHP']
                 },
                 {
-                    'category': 6,
+                    'category': 'databases',
                     'items': ['TSQL', 'MySql']
                 },
                 {
-                    'category': 5,
+                    'category': 'designPatterns/Principles',
                     'items': ['MVC', 'SOLID', 'DRY']
                 },
                 {
-                    'category': 4,
-                    'items': ['.NET', 'ASP.MVC', 'Django', 'Flask', 'Laravel', 'EntityFramework', 'ADO.NET', 'SQLAlchemy']
+                    'category': 'frameworks',
+                    'items': ['.NET', 'ASP.MVC', 'Django', 'Flask', 'Laravel', 
+                              'EntityFramework', 'ADO.NET', 'SQLAlchemy']
+                },
+                {
+                    'category': 'dataVisualization',
+                    'items': ['d3.js', 'highcharts', 'plotly']
                 }
 
         ]
@@ -102,13 +162,11 @@ class Me:
         languages = [
                 ('Georgian', 'Native'),
                 ('English', 'Fluent'),
-                ('Deutsch', 'Beginner'),
-                ('Russion', 'Intermidiate')
+                ('Deutsch', 'Beginner')
         ]
         return languages
 
 if __name__ == '__main__':
     me = Me()</code></pre>
 	</body>
-
 </html>
