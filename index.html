@@ -17,11 +17,10 @@
 		</style>
 		<link rel="stylesheet"
       		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-dune-dark.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
 	</head>
-	<body>
-		<pre><code class="python">
+	<body><pre><code class="python"></code></pre>
+    <script>
+        var cv = `
 #!/usr/bin/python
 
 """
@@ -32,26 +31,23 @@ class Me:
     def __init__(self):
         self.firstName = 'Giorgi'
         self.lastName = 'Ghviniashvili'
-        self.age = 24
+        self.age = ${new Date().getFullYear() - 1995}
         self.sex = 'Male'
         self.dateOfBirth = 'Eighteenth of February'
-        self.phoneNumber = '+995568012510'
         self.mail = 'giorgi.ghviniashvili00@gmail.com'
         self.description = 'I like cats, movies, hiking and camping. =)'
         self.github = 'https://github.com/giorgi-ghviniashvili'
 
     def get_working_experience(self):
         experience = [
-                ('November 2016 - Present', 'weinor.de', 'Programmer' ),
-                ('August 2016', 'Ministry Of Labour, Health and Social Affairs of Georgia', 
-                                'Internship in IT department'),
-                ('March 2015', 'Insurance Company, Aldagi')
+                ('December 2018 - Present', 'Upwork', 'Data Visualization Developer' ),
+                ('November 2016 - Present', 'weinor.de', 'Programmer' )
         ]
         return experience
     
     def get_education(self):
         education = [
-                ('September 2013 - Present', 'Ivane Javakhishvili State University, Faculty of Economics'),
+                ('September 2013 - July 2018', 'Ivane Javakhishvili State University, Faculty of Economics'),
                 ('November 2015 - August 2017', 'College Itvet, Computer Systems and Networking' ),
                 ('September 2001 - July - 2013','#1 Public School of Dedoflistskaro, city')
         ]
@@ -68,7 +64,7 @@ class Me:
         skills = [
                 {
                     'category': 'officeSkills',
-                    'items': ['MS Word', 'MS Excel', 'MS Project', 'MS PowerPoint']
+                    'items': 'hmm, are you kidding me?'
                 },
                 {
                     'category': 'serverAdministration',
@@ -100,7 +96,7 @@ class Me:
                 },
                 {
                     'category': 'dataVisualization',
-                    'items': ['d3.js', 'dc.js', 'canvas & WebGL', 'highcharts', 'plotly']
+                    'items': ['d3.js', 'dc.js', 'canvas & WebGL', 'highcharts', 'plotly', 'mapbox.gl']
                 }
 
         ]
@@ -115,6 +111,11 @@ class Me:
         return languages
 
 if __name__ == '__main__':
-    me = Me()</code></pre>
+    me = Me()`;
+
+    document.querySelector('.python').innerHTML = cv;
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 	</body>
 </html>
