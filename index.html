@@ -1,138 +1,49 @@
-<html>
-	<head>
-		<style>
-			pre{
-				margin: 0px;
-			}
-			body, html{
-				padding: 0px;
-				margin: 0px;
-			}
-            .pic-ascii{
-                position: fixed;
-                top: 15px;
-                right: 15px;
-                z-index: 99999;
-            }
-		</style>
-		<link rel="stylesheet"
-      		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-dune-dark.min.css">
-	</head>
-	<body><pre><code class="python"></code></pre>
-    <script>
-        var cv = `
-#!/usr/bin/python
+---
+layout: default
+title: A beautiful two-column Jekyll theme
+description: A beautiful, minimal two-column portfolio theme built for Jekyll. Duet makes your work look simply awesome.
+featured_image: /images/social.jpg
+---
 
-"""
-    Curriculum Vitae
-"""
+<section class="intro">
 
-class Me:
-    def __init__(self):
-        self.firstName = 'Giorgi'
-        self.lastName = 'Ghviniashvili'
-        self.age = ${new Date().getFullYear() - 1995}
-        self.sex = 'Male'
-        self.dateOfBirth = 'Eighteenth of February'
-        self.mail = 'giorgi.ghviniashvili00@gmail.com'
-        self.description = 'I like cats, movies, hiking and camping. =)'
-        self.github = 'https://github.com/giorgi-ghviniashvili'
-        self.upwork = 'https://www.upwork.com/freelancers/~01ec016f01e9a4f8d1'
-        self.observablehq = 'https://observablehq.com/@giorgi-ghviniashvili'
-        self.d3Stuff = 'https://giorgi-ghviniashvili.github.io/D3/'
-        self.peoplePerHour = 'https://www.peopleperhour.com/freelancer/giorgi/d3-js-developer/2383709'
-        self.linkedIn = 'https://www.linkedin.com/in/giorgi-ghviniashvili/'
-        
-    def get_public_projects(self):
-        projects = [
-            '<a href="https://geohistory.ge/" target="_blank">geohistory.ge</a>',
-            '<a href="https://giorgi-ghviniashvili.github.io/trump-tweet-viz/" target="_blank">trump tweet viz</a>',
-            '<a href="http://cartographie.faitsetdocuments.com/" target="_blank">cartographie</a>',
-            '<a href="http://livsplan.se" target="_blank">livsplan.se</a>',
-            '<a href="https://giorgi-ghviniashvili.github.io/hichem-upwork/" target="_blank">Consumer journey viz</a>',
-            '<a href="http://www.dexterafrance.com/" target="_blank">dexterafrance.com</a>',
-            '<a href="http://salam-yvelas.herokuapp.com/" target="_blank">Chat room application</a>'
-        ]
-        return projects
+	<div class="wrap">
 
-    def get_working_experience(self):
-        experience = [
-                ('December 2017 - Present', 'Upwork', 'Data Visualization Developer' ),
-                ('November 2016 - Present', 'weinor.de', 'Programmer' )
-        ]
-        return experience
-    
-    def get_education(self):
-        education = [
-                ('September 2013 - July 2018', 'Ivane Javakhishvili State University, Faculty of Economics'),
-                ('November 2015 - August 2017', 'College Itvet, Computer Systems and Networking' ),
-                ('September 2001 - July - 2013','#1 Public School of Dedoflistskaro, city')
-        ]
-        return education
-    
-    def get_attended_trainings(self):
-        trainings = [
-                ('February 2016 - March 2016', 'GITA, Training of Python Trainer'),
-                ('August 2014', 'Banking, credit oficer trainig at Business Academy')
-        ]
-        return trainings
-    
-    def get_technical_skills(self):
-        skills = [
-                {
-                    'category': 'officeSkills',
-                    'items': ['hmm, are you kidding me?']
-                },
-                {
-                    'category': 'serverAdministration',
-                    'items': ['Linux Server(Rad Hat, Debian, Ubuntu, Centos, ArchLinux)', 
-                              'Apache', 'bind', 
-                              'squid', 'nfs', 'samda', 
-                              'Windows server']
-                },
-                {
-                    'category': 'frontEndScriptingAndMarkup',
-                    'items': ['HTML', 'CSS', 'JQuery', 'Ajax', 'AngularJS', 'Angular 6 (learning)', 'VueJS']
-                },
-                {
-                    'category': 'Languages',
-                    'items': ['C/C++', 'C#', 'Python', 'JavaScript', 'Bash Scripting', 'PHP']
-                },
-                {
-                    'category': 'databases',
-                    'items': ['TSQL', 'MySql', 'MsSql', 'SqlLite']
-                },
-                {
-                    'category': 'designPatterns/Principles',
-                    'items': ['MVC', 'SOLID', 'DRY']
-                },
-                {
-                    'category': 'frameworks',
-                    'items': ['.NET', 'ASP.MVC', 'Django', 'Flask', 'Laravel', 
-                              'EntityFramework', 'ADO.NET', 'SQLAlchemy']
-                },
-                {
-                    'category': 'dataVisualization',
-                    'items': ['d3.js', 'dc.js', 'canvas & WebGL', 'highcharts', 'plotly', 'mapbox.gl']
-                }
+		<h1>A beautiful, minimal two-column
+		portfolio theme built for Jekyll.</h1>
+		<p>Duet makes your work look simply awesome.</p>
 
-        ]
-        return skills
-    
-    def get_foreign_languages(self):
-        languages = [
-                ('Georgian', 'Native'),
-                ('English', 'Fluent'),
-                ('Deutsch', 'Beginner')
-        ]
-        return languages
+	</div>
 
-if __name__ == '__main__':
-    me = Me()`;
+</section>
 
-    document.querySelector('.python').innerHTML = cv;
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-	</body>
-</html>
+<section class="portfolio">
+
+	<div class="content-wrap portfolio-wrap">
+
+		{% for project in site.projects reversed %}
+
+		<div class="portfolio-item">
+
+			<a class="portfolio-item__link" href="{{ project.url }}">
+
+				<div class="portfolio-item__image">
+					<img src="{{ project.featured_image  }}" alt="{{ project.title }}">
+				</div>
+
+				<div class="portfolio-item__content">
+					<div class="portfolio-item__info">
+						<h2 class="portfolio-item__title">{{ project.title }}</h2>
+						<p class="portfolio-item__subtitle">{{ project.subtitle }}</p>
+					</div>
+				</div>
+
+			</a>
+
+		</div>
+
+		{% endfor %}
+
+	</div>
+
+</section>
