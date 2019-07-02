@@ -12,10 +12,11 @@ featured_image: '/images/customer-journey/head-image.png'
 
 Each customer goes different path on e-shop platform. He logs in, searches, adds some products to cart then buys or cancels. Here is the visualization of this journey. The ball in the center is login, then intermetiate circles are products added by the customer. Red one means that customer did not buy while blue ones mean that the purchase completed successfully.
 
-<div class="gallery" data-columns="3">
+<div class="gallery" data-columns="2">
 	<img src="/images/customer-journey/hover.jpg">
 	<img src="/images/customer-journey/click.jpg">
 	<img src="/images/customer-journey/filter.jpg">
+    <img src="/images/customer-journey/red.jpg">
 </div>
 
 ## Tech stack
