@@ -8,7 +8,7 @@ featured_image: '/images/sleep-chart/stages.jpg'
 
 ![](/images/sleep-chart/head.jpg)
 
-The [sleep cicle](https://en.wikipedia.org/wiki/Sleep_cycle) is an oscillation between the slow-wave and REM (paradoxical) phases of sleep. It is sometimes called the ultradian sleep cycle, sleep–dream cycle, or REM-NREM cycle, to distinguish it from the circadian alternation between sleep and wakefulness.
+The [sleep cycle](https://en.wikipedia.org/wiki/Sleep_cycle) is an oscillation between the slow-wave and REM (paradoxical) phases of sleep. It is sometimes called the ultradian sleep cycle, sleep–dream cycle, or REM-NREM cycle, to distinguish it from the circadian alternation between sleep and wakefulness.
 
 We have two types of sleep charts:
 * Stages
