@@ -2,19 +2,23 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/about</loc>
-<lastmod>2019-07-09T14:20:36+04:00</lastmod>
+<lastmod>2019-09-18T16:37:22+04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/contact</loc>
-<lastmod>2019-07-09T14:20:36+04:00</lastmod>
+<lastmod>2019-09-18T16:37:22+04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/thanks</loc>
-<lastmod>2019-07-09T14:20:36+04:00</lastmod>
+<lastmod>2019-09-18T16:37:22+04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/blog/demo-post</loc>
 <lastmod>2018-06-30T04:00:00+04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/project/interactive-map</loc>
+<lastmod>2018-09-27T04:00:00+04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/project/org-chart</loc>
@@ -59,6 +63,10 @@
 <url>
 <loc>http://localhost:4000/project/geohistory</loc>
 <lastmod>2019-07-02T04:00:00+04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/project/blocks</loc>
+<lastmod>2019-09-17T04:00:00+04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>

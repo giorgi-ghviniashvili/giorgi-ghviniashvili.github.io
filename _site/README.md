@@ -1,3 +1,2 @@
-# giorgi-ghviniashvili.github.io
-
-# My portfolio
+# portfolio
+https://ghviniashvili.com
